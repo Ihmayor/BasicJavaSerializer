@@ -1,45 +1,30 @@
 package Program1;
 
 import java.io.Console;
+import java.util.LinkedList;
+import java.util.Scanner;
+
 
 public class SenderProgram {
-    static Console console;
+	
 	public static void main (String args[])
 	{
-		console = System.console();
-		
-	    Object obj = getOption();
-	}
-	
-	static Object getOption()
-	{
-		System.out.println("Class Options");
-	    System.out.println("Class with only primitives: 0");
-	    System.out.println("Class with a primitive array: 1");
-	    System.out.println("Class with a  reference of another object: 2");
-	    System.out.println("Class with an array of references:3");
-	    System.out.println("Class with a java list: 4");
-	   
-	    Object obj = null;
-	    
-		String optionSelected  = console.readLine("Please enter the class: ");		
-	    switch(optionSelected)
+		Scanner in;
+		in = new Scanner(System.in);
+	    System.out.print("Would you like to create an Object?(y/n)");   
+	    String response =  in.nextLine();
+		LinkedList<Object> created = new LinkedList<Object>();
+				
+		while(response.equals("Y") || response.equals("y"))
 	    {
-	    case "0":
-	    	break;
-	    case "1":
-	    	break;
-	    case "3":
-	    	break;
-	    case "4":
-	    	break;
-	    default:
-	    	System.out.println("ERROR! THIS IS NOT A SELECTED OPTION");
-	    	obj = getOption();
-	    	break;
+		    Object obj = ObjectCreator.getOption();
+	    	created.add(obj);
+		    System.out.print("Would you like to create an Object?(y/n)");
+		    response =  in.nextLine();
 	    }
-	    
-	    return obj;
+		
+		System.out.println("Serializing Objects");
+		
 	}
 	
 }

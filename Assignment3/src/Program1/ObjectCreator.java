@@ -2,14 +2,15 @@ package Program1;
 
 import java.io.Console;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class ObjectCreator {
-    static Console console;
+    static Scanner console;
 
 	static Object getOption()
 	{
 	
-		console = System.console();
+		console = new Scanner(System.in);
 		System.out.println("Class Options");
 	    System.out.println("Class with only primitives: 0");
 	    System.out.println("Class with a primitive array: 1");
@@ -20,19 +21,26 @@ public class ObjectCreator {
 	    Object obj = null;
 	    
 	    System.out.print("Please enter the class: ");
-		String optionSelected  = console.readLine();		
+		String optionSelected  = console.nextLine();		
 	    switch(optionSelected)
 	    {
 	    case "0":
+	    	obj = createHasPrim();
 	    	break;
 	    case "1":
+	    	obj = createHasPrimArray();
+	    	break;
+	    case "2":
+	    	obj = createHasRef();
 	    	break;
 	    case "3":
+	    	obj = createHasRefArray();
 	    	break;
 	    case "4":
+	    	obj = createHasJavaList();
 	    	break;
 	    default:
-	    	System.out.println("ERROR! THIS IS NOT A SELECTED OPTION");
+	    	System.out.println("ERROR! THIS IS NOT A SELECTED OPTION. Try again!");
 	    	obj = getOption();
 	    	break;
 	    }
@@ -49,10 +57,10 @@ public static Object createHasPrim()
 {
 	System.out.println("Please init values for class: hasPrim (int varA, intvarB)");
     System.out.print("Please enter the first int for varA: ");
-	String varA  = console.readLine();	
+	String varA  = console.nextLine();	
 	System.out.println();
 	System.out.println();	System.out.print("Please enter the second int for varB: ");
-	String varB  = console.readLine();
+	String varB  = console.nextLine();
 	
 	return new HasPrim(Integer.valueOf(varA), Integer.valueOf((varB)));
 }
@@ -71,11 +79,11 @@ public static Object createHasPrimArray()
 {
 	System.out.println("Please init values for class: hasPrimArray(int[3] array)");
 	System.out.print("Please enter int at index0: ");
-	String var0 = console.readLine();
+	String var0 = console.nextLine();
 	System.out.print("Please enter int at index1: ");
-    String var1 = console.readLine();
+    String var1 = console.nextLine();
 	System.out.print("Please enter int at index2: ");
-	String var2 = console.readLine();
+	String var2 = console.nextLine();
 	int [] newArray = new int[] {Integer.valueOf(var0),Integer.valueOf(var1),Integer.valueOf(var2)};
 	
 	return new HasPrimArray(newArray);
