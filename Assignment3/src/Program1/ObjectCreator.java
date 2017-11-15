@@ -108,7 +108,7 @@ public static Object createHasPrimArray()
 	System.out.print("Please enter int at index2: ");
 	String var2 = console.nextLine();
 	int [] newArray = new int[] {Integer.valueOf(var0),Integer.valueOf(var1),Integer.valueOf(var2)};
-	
+
 	return new HasPrimArray(newArray);
 }
 

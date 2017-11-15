@@ -40,32 +40,36 @@ public class SenderProgram {
 			    }
 				
 				System.out.println("Serializing Objects");
-
 				Serializer serializer = new Serializer();
 				LinkedList<Document> docList = new LinkedList<Document>();
+			
 				for(Object obj: created)
 				{
 					Document doc = serializer.serialize(obj);
 					docList.add(doc);
 				}
-			
-				Document sendOff = serializer.combineDocument(docList);
+				
+				DataOutputStream out = new DataOutputStream(client.getOutputStream());
+				out.writeUTF("Hello from client");
+				
+				//Document sendOff = serializer.combineDocument(docList);
 				
 			    //notes
 			    //Client is the object creator
 			    
 			    //Server is the deserializer
 				
-				DataOutputStream outStream = new DataOutputStream(client.getOutputStream());
-				outStream.writeUTF("Hello from client");
-			
-				XMLOutputter outputter = new XMLOutputter();
-				outputter.output(sendOff, outStream);
+				
+//				DataOutputStream outStream = new DataOutputStream(client.getOutputStream());
+
+				//XMLOutputter outputter = new XMLOutputter();
+			//	outputter.output(sendOff, outStream);
+				//outStream.flush();
 		    }
 		    
 			
 			// create input stream and send message from client to server 
-//			DataInputStream in = new DataInputStream(client.getInputStream());
+//			DataInputStream in = new DataIYnputStream(client.getInputStream());
 			
 	//		System.out.println("Server messaged: " + in.readUTF());
 			client.close();

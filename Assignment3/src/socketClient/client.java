@@ -19,6 +19,7 @@ public class client {
 			DataInputStream in = new DataInputStream(client.getInputStream());
 			
 			System.out.println("Server messaged: " + in.readUTF());
+
 			client.close();
 		} catch (Exception e) {
 			e.printStackTrace();

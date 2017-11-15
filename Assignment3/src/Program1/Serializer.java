@@ -67,6 +67,15 @@ public Document serializeHasPrim(Document doc, Class c, Object o)
     
 	elem.setAttribute("class", c.getName());
 	elem.setAttribute("id",Integer.toString(o.hashCode()));
+
+	Element idField = new Element("field");
+	idField.setAttribute("name", "id");
+	idField.setAttribute("declaringClass",c.getName());
+	Element idVal = new Element("value").addContent(Integer.toString(h.id));
+	idField.addContent(idVal);
+	elem.addContent(idField);
+
+	
 	
 	Element varAField = new Element("field");
 	varAField.setAttribute("name", "varA");
@@ -82,7 +91,6 @@ public Document serializeHasPrim(Document doc, Class c, Object o)
 	
 	elem.addContent(varAField);
 	elem.addContent(varBField);
-	
 	root.addContent(elem);
 	doc.setRootElement(root);
 	return doc;
@@ -94,7 +102,16 @@ public Document serializeHasPrimArray(Document doc, Class c, Object o)
 	Element elem = new Element("object");
 	Element arr = new Element("object");
 	HasPrimArray hO = (HasPrimArray)o;
+
 	
+	Element idField = new Element("field");
+	idField.setAttribute("name", "id");
+	idField.setAttribute("declaringClass",c.getName());
+	Element idVal = new Element("value").addContent(Integer.toString(hO.id));
+	idField.addContent(idVal);
+	elem.addContent(idField);
+
+
 	elem.setAttribute("class",c.getName());
 	elem.setAttribute("id", Integer.toString(o.hashCode()));
 
@@ -138,11 +155,20 @@ public Document serializeHasRef(Document doc, Class c,Object o)
 	
 	//Set Root
 	Element root = new Element("serialized");
+
 	
 	//Set hasRefElem
 	Element elem = new Element("object");
 	elem.setAttribute("class",c.getName());
 	elem.setAttribute("id", Integer.toString(o.hashCode()));
+	
+	Element idField = new Element("field");
+	idField.setAttribute("name", "id");
+	idField.setAttribute("declaringClass",c.getName());
+	Element idVal = new Element("value").addContent(Integer.toString(hO.id));
+	idField.addContent(idVal);
+	elem.addContent(idField);
+	
 	
 	Element field1 = new Element("field");
 	field1.setAttribute("name","self");
@@ -200,7 +226,13 @@ public Document serializeHasRefArray(Document doc, Class c, Object o)
 	elem.setAttribute("class", "HasRefArray");
 	elem.setAttribute("id", Integer.toString(hO.hashCode()));
 
-
+	Element idField = new Element("field");
+	idField.setAttribute("name", "id");
+	idField.setAttribute("declaringClass",c.getName());
+	Element idVal = new Element("value").addContent(Integer.toString(hO.id));
+	idField.addContent(idVal);
+	elem.addContent(idField);
+	
 	//Create Array Object of Ref
     Element arr = new Element("object");
     arr.setAttribute("class", "[HasPrim");
@@ -270,9 +302,19 @@ public Document serializeHasJavaList(Document doc, Class c, Object o)
 	Element root = new Element("serialized");
 	Element elem = new Element("object");
 
+	
 	//Get Original Objects
 	HasJavaList hO = (HasJavaList)o;
 	
+
+	Element idField = new Element("field");
+	idField.setAttribute("name", "id");
+	idField.setAttribute("declaringClass",c.getName());
+	Element idVal = new Element("value").addContent(Integer.toString(hO.id));
+	idField.addContent(idVal);
+	elem.addContent(idField);
+	
+
 	//Get original linked list
 	LinkedList<Object> l1 = hO.javaList;	
 

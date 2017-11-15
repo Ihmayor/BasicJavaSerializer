@@ -2,10 +2,12 @@ package Program1;
 
 public class HasRefArray {
 
-	HasPrim[] refArray;
+	public HasPrim[] refArray;
+	public int id;
 	
 	public HasRefArray(HasPrim[] setRefArray)
 	{
 		setRefArray = refArray;
+		id = this.hashCode();
 	}
 }
