@@ -16,9 +16,9 @@ public Document combineDocument(LinkedList<Document> docs)
 	Element root = new Element("serialized");
 	for(Document d: docs)
 	{
-		for(Content e: d.getRootElement().getDescendants())
+		for(Element e: d.getRootElement().getChildren())
 		{
-			root.addContent(e);
+			root.addContent(e.clone());
 		}
 	}
 	returnDoc.setRootElement(root);
@@ -28,25 +28,34 @@ public Document combineDocument(LinkedList<Document> docs)
 public Document serialize(Object obj)
 {
 	Document doc = new Document();
-	Class classObj = obj.getClass();
-	String className = classObj.getName();
-	switch(className) {
-	case "Program1.HasPrim":
-		doc = serializeHasPrim(doc, classObj, obj);
-		break;
-	case "Program1.HasPrimArray":
-		doc = serializeHasPrimArray(doc,classObj, obj);
-		break;
-	case "Program1.HasJavaList":
-		doc = serializeHasJavaList(doc,classObj, obj);
-		break;
-	case "Program1.HasRef":
-		doc = serializeHasRef(doc,classObj, obj);
-		break;
-	case "Program1.HasRefArray":
-		doc = serializeHasRefArray(doc,classObj,obj);
-		break;
+	try {
+		Class<? extends Object> classObj = obj.getClass();
+		String className = classObj.getName();
+		switch(className) {
+		case "Program1.HasPrim":
+			doc = serializeHasPrim(doc, classObj, obj);
+			break;
+		case "Program1.HasPrimArray":
+			doc = serializeHasPrimArray(doc,classObj, obj);
+			break;
+		case "Program1.HasJavaList":
+			doc = serializeHasJavaList(doc,classObj, obj);
+			break;
+		case "Program1.HasRef":
+			doc = serializeHasRef(doc,classObj, obj);
+			break;
+		case "Program1.HasRefArray":
+			doc = serializeHasRefArray(doc,classObj,obj);
+			break;
+		}
+		
 	}
+	catch(Exception ex)
+	{
+		System.out.println("weee are here!!!");
+       ex.printStackTrace();
+	}
+	
 	return doc;
 }
 
