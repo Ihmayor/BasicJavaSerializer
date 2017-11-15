@@ -12,7 +12,7 @@ public class Visualizer {
 
 	public static void ShowFields(Class classObject, Object obj)
 	{
-		
+	
 	}
 
 

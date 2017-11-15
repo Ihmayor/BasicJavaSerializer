@@ -4,6 +4,8 @@ import java.io.Console;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+import org.jdom2.Document;
+
 
 public class SenderProgram {
 	
@@ -19,11 +21,23 @@ public class SenderProgram {
 	    {
 		    Object obj = ObjectCreator.getOption();
 	    	created.add(obj);
-		    System.out.print("Would you like to create an Object?(y/n)");
+	    	System.out.println(obj.getClass().getName());
+	    	System.out.print("Would you like to create another Object?(y/n)");
 		    response =  in.nextLine();
 	    }
 		
 		System.out.println("Serializing Objects");
+	Serializer serializer = new Serializer();
+	LinkedList<Document> docList = new LinkedList<Document>();
+		for(Object obj: created)
+		{
+			Document doc = serializer.serialize(obj);
+			docList.add(doc);
+		}
+	
+		Document sendOff = serializer.combineDocument(docList);
+		
+		
 		
 	}
 	

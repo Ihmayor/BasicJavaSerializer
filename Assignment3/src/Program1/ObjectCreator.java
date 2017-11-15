@@ -58,9 +58,20 @@ public static Object createHasPrim()
 	System.out.println("Please init values for class: hasPrim (int varA, intvarB)");
     System.out.print("Please enter the first int for varA: ");
 	String varA  = console.nextLine();	
+	while(varA.equals("") || varA==null)
+	{
+	    System.out.print("Please enter the first int for varA: ");
+		varA = console.nextLine();
+	}
+
 	System.out.println();
 	System.out.println();	System.out.print("Please enter the second int for varB: ");
 	String varB  = console.nextLine();
+	while(varB.equals("") || varB==null)
+	{
+		System.out.println();	System.out.print("Please enter the second int for varB: ");
+		varB = console.nextLine();
+	}
 	
 	return new HasPrim(Integer.valueOf(varA), Integer.valueOf((varB)));
 }
@@ -80,8 +91,20 @@ public static Object createHasPrimArray()
 	System.out.println("Please init values for class: hasPrimArray(int[3] array)");
 	System.out.print("Please enter int at index0: ");
 	String var0 = console.nextLine();
+	while(var0.equals("") || var0==null)
+	{
+		System.out.print("Please enter int at index0: ");
+		var0 = console.nextLine();
+		
+	}
 	System.out.print("Please enter int at index1: ");
     String var1 = console.nextLine();
+	while(var1.equals("") || var1==null)
+	{
+		System.out.print("Please enter int at index1: ");
+		var1 = console.nextLine();
+		
+	}
 	System.out.print("Please enter int at index2: ");
 	String var2 = console.nextLine();
 	int [] newArray = new int[] {Integer.valueOf(var0),Integer.valueOf(var1),Integer.valueOf(var2)};
