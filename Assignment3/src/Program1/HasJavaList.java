@@ -4,10 +4,10 @@ import java.util.LinkedList;
 
 public class HasJavaList {
 	
-	public LinkedList<String> javaList;
+	public LinkedList<Object> javaList;
 	
 	
-	public HasJavaList(LinkedList<String> newList){
+	public HasJavaList(LinkedList<Object> newList){
 		javaList = newList;
 	}
 	

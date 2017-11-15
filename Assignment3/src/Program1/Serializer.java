@@ -1,7 +1,24 @@
 package Program1;
+import org.jdom2.*;
+import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 public class Serializer {
-/*
+
+	
+public Document serialize(Object obj)
+{
+
+	
+	
+	Document doc = new Document();
+	return doc;
+}
+	/*
  * Serialization will be implemented in a Java class called Serializer, and will be invoked using the method:
 
 public org.jdom.Document serialize(Object obj)
@@ -14,11 +31,7 @@ If the type of the field is a primitive, store the primitive as content of a val
 If the field is a reference to another object, store the id of that object as content of a reference element. For example:
 5
 Of course, the object being referred to must also be serialized, and will be another object element nested inside the root element. Array objects will be similar to the object element described above, except that an additional length attribute is used, and each element of the array will be stored as content to a value or reference element, depending on the component type. For example:
-S
-m
-i
-t
-h
+Smith
  * 
  * 
  * 

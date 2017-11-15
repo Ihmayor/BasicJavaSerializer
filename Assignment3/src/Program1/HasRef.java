@@ -2,13 +2,13 @@ package Program1;
 
 public class HasRef {
 
-	public HasPrimArray ref;
-	public HasRef next;
+	public HasPrim ref;
+	public HasRef self;
 	
 	
-	public HasRef(HasPrimArray setRef, HasRef setNext)
+	public HasRef(HasPrim setRef)
 	{
 		ref = setRef;
-		next = setNext;
+		self = this;
 	}
 }

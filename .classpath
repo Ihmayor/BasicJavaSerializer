@@ -3,5 +3,14 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="src" path="Assignment3/src"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jdom-2.0.6/jdom-2.0.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/User/Downloads/jdom-2.0.6/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jdom-2.0.6/jdom-2.0.6-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jdom-2.0.6/jdom-2.0.6-junit.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jdom-2.0.6/jdom-2.0.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jdom-2.0.6/jdom-2.0.6-contrib.jar"/>
 	<classpathentry kind="output" path="Assignment3/bin"/>
 </classpath>
