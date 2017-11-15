@@ -1,7 +1,16 @@
 package Program2;
 
+import java.util.LinkedList;
+
+import org.jdom2.Document;
+
 public class Deserializer {
  
+	public Object deserialize(Document document)
+	{
+		return new LinkedList<Object>();
+	}
+	
 /*
  * 
  * Deserialization will be implemented in a Java class called Deserializer, and will be invoked using the method:

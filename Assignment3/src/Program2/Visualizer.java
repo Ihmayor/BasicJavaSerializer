@@ -1,8 +1,18 @@
 package Program2;
 
+import java.util.LinkedList;
+
 public class Visualizer {
 	
-	public static void VisualizObject(Object object)
+	public static void VisualizeObjects(LinkedList<Object> objects)
+	{
+		for(Object obj: objects)
+		{
+			VisualizeObject(obj);
+		}
+	}
+	
+	public static void VisualizeObject(Object object)
 	{
 		//Fetch Class Object for further inspection
 		Class classObj = object.getClass();

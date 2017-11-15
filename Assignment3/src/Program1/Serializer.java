@@ -190,11 +190,11 @@ public Document serializeHasRefArray(Document doc, Class c, Object o)
 	Element elem = new Element("object");
 	elem.setAttribute("class", "HasRefArray");
 	elem.setAttribute("id", Integer.toString(hO.hashCode()));
-	
+
 
 	//Create Array Object of Ref
     Element arr = new Element("object");
-    arr.setAttribute("class", "[hasPrim");
+    arr.setAttribute("class", "[HasPrim");
     arr.setAttribute("id", Integer.toString(hO.refArray.hashCode()));
     arr.setAttribute("length", "3");
 
@@ -214,10 +214,11 @@ public Document serializeHasRefArray(Document doc, Class c, Object o)
 	//Add this to root.
 	root.addContent(arr);
 
-	//Create Field for Array in Original Elem
+	//Create Field for Array in Original Element
 	Element fieldArr = new Element("field");
 	fieldArr.setAttribute("name","refArray");
 	fieldArr.setAttribute("declaringclass", c.getName());
+	
 	Element arrRef = new Element("reference");
 	arrRef.addContent(Integer.toString(hO.refArray.hashCode()));
 	fieldArr.addContent(arrRef);
@@ -292,10 +293,6 @@ public Document serializeHasJavaList(Document doc, Class c, Object o)
     Document doc1 = serializeHasRefArray(new Document(), o1.getClass(), o1);
     Document doc2 = serializeHasRefArray(new Document(), o2.getClass(), o2);
 	
-    //notes
-    //Client is the object creator
-    
-    //Server is the deserializer
     
     
 	LinkedList<Document> totalDocs = new LinkedList<Document>();
@@ -305,7 +302,6 @@ public Document serializeHasJavaList(Document doc, Class c, Object o)
 	totalDocs.add(doc2);
 	
 	Document combinedDoc = combineDocument(totalDocs);
-	
 	
 	return combinedDoc;
 }
