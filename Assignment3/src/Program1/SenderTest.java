@@ -7,9 +7,34 @@ import org.junit.Test;
 public class SenderTest {
 
 	@Test
-	public void test() {
+	public void TestCreationHasPrimArray() {
 		fail("Not yet implemented");
 	}
+	
+	
+	@Test
+	public void TestCreationHasPrim() {
+		fail("Not yet implemented");
+	}
+
+	
+	@Test
+	public void TestCreationHasJavaList() {
+		fail("Not yet implemented");
+	}
+	
+
+	@Test
+	public void TestCreationHasRef() {
+		fail("Not yet implemented");
+	}
+
+
+	@Test
+	public void TestCreationHasRefArray() {
+		fail("Not yet implemented");
+	}
+
 	
 	/*
 	 * 
