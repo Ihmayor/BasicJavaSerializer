@@ -89,10 +89,9 @@ public class Deserializer {
 		}
 		catch(Exception ex)
 		{
-			ex.printStackTrace(s);
+			ex.printStackTrace();
 		}
-		retrun newObj;
-		return null;
+		return newObj;
 	}
 	
 	

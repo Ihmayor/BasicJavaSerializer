@@ -1,0 +1,65 @@
+commit 10ef0ddd262f9abff77a805586ac77367671e9de
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Tue Nov 14 15:45:32 2017 -0700
+
+    first commit
+
+commit 5b764f0e3aa2af0796617e072822161aef6a77cd
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Tue Nov 14 15:45:47 2017 -0700
+
+    Committing all files
+
+commit 17f0d8d8fa79921955be6fa3d7176a2cdd4e485c
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 04:29:23 2017 -0700
+
+    Moving getOption to relevant class
+
+commit 0702a544418a400bca408dd58613a369da1342cf
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 05:15:40 2017 -0700
+
+    Created object classes
+
+commit c5d36df0384cb4b022df9c287f4012223024c24a
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 06:42:02 2017 -0700
+
+    Object Creation Complete
+
+commit f08403ae90bedceb458995c9e1dc0b5c3c924ab1
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 09:58:07 2017 -0700
+
+    Finishing Serialization
+
+commit f0e861d80deb84e1c82ae5cf68b37a6102f1afa2
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 10:52:51 2017 -0700
+
+    Completed serialization
+
+commit 43f08501e09bca5e8e7c32137ce8ebcbc8fbd0ec
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 11:22:31 2017 -0700
+
+    Added Server Client Link
+
+commit a7ec099ec1290e3d701f4c1595efe3caba150034
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 11:39:13 2017 -0700
+
+    Bug fix
+
+commit 735401ba21629cac5fa2eabc5fd643072c0a3206
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 14:39:34 2017 -0700
+
+    Not gonna finish as much as I could
+
+commit 29ae343780a10dc8c0f06f7b8ddbd5fb5e1b9803
+Author: Irene Mayor <ihmayor@ucalgary.ca>
+Date:   Wed Nov 15 15:18:26 2017 -0700
+
+    Comitting Attribute Changes
